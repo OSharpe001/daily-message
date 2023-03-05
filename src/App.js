@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const time = new Date();
   const day = time.toLocaleString("en-us", { weekday: "long" });
-  const morning = time.getHours() >= 6 && time.getHours() <=11;
+  const morning = time.getHours()  >= 6 && time.getHours() <=11;
   let dayMessage;
 
   if (day.toLowerCase() === "monday") {
@@ -25,7 +25,12 @@ function App() {
     dayMessage = `Oh, boy... ${day}'s here, y'all. Get 
     the last of your fun in and get some rest. We'll 
     have to do this all over again, tomorrow.`
-  }
+  };
+
+  // console.log("TODAY'S DAY, DATE, TIME AND TIME-ZONE: ", time)
+  // console.log("DAY: ", day);
+  // console.log("HOUR OF THE DAY: ",time.getHours());
+
   return (
     <div className="App">
       <h1>{dayMessage}</h1>
